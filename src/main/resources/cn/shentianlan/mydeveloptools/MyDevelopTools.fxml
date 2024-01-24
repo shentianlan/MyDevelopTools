@@ -37,13 +37,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
-<VBox prefHeight="703.0" prefWidth="1002.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.shentianlan.mydeveloptools.EditTextController">
+<VBox prefHeight="703.0" prefWidth="1002.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.shentianlan.mydeveloptools.controller.EditTextController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
         <Menu mnemonicParsing="false" text="开始" >
           <items>
             <MenuItem fx:id="MergeIntoOneLine" mnemonicParsing="false" onAction="#mergeText" text="合并成一行"  />
+          </items>
+          <items>
+            <MenuItem fx:id="ExtractQrCode" mnemonicParsing="false" onAction="#extractQrCode" text="识别二维码"  />
           </items>
         </Menu>
       </menus>

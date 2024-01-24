@@ -1,5 +1,6 @@
 package cn.shentianlan.mydeveloptools;
 
+import cn.shentianlan.mydeveloptools.controller.EditTextController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,6 +14,9 @@ public class MyDevelopToolsApplication extends Application {
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("MyDevelopTools.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 500);
+        EditTextController editTextController = fxmlLoader.getController();
+        editTextController.setStage(primaryStage);
+
         primaryStage.setIconified(false);
         primaryStage.getIcons().add(new Image("./icon/MyDevelopTools.jpg"));
         primaryStage.setScene(scene);
